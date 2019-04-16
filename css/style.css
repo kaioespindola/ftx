@@ -17,6 +17,10 @@ body {
     background: #175082;
 }
 
+a {
+    color: var(--claro);
+}
+
 
 /* Menu Módulos */
 
@@ -395,7 +399,8 @@ body {
 }
 
 .condominial .item {
-    background: #306fc9;
+    background-size: cover;
+    background-position: top center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -405,6 +410,7 @@ body {
     margin-top: 2rem;
     font-size: 1rem;
     padding: .5rem;
+    text-shadow: 2px 2px #000
 }
 
 @media(max-width:500px) {
@@ -583,19 +589,24 @@ body {
 
 /* Footer */
 
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--claro);
+}
+
 .footer img {
-    left:0;
-    bottom:0;
+    height: 90px;
 }
 
-@media(max-width:500px) {
-    .footer img {
-        width:80px;
-    }
+.footer .sociais i {
+    padding: .3rem;
+    font-size: 1.4rem;
+    transition: .5s ease-in-out;
 }
 
-.footer p {
-    text-align: center;
-    color: #fff;
-    padding-bottom: 2rem;
+.footer .sociais i:hover {
+    color: var(--link);
 }
