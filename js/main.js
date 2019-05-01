@@ -69,3 +69,47 @@ new Swiper ('.swiper-container', {
     }
   
 });
+
+let ROOT_URL = 'https://cors-anywhere.herokuapp.com/http://agium.com.br:8050/agium-imoveis/rest/anuncio/buscarAnuncios';
+
+let data = {
+    "fields": [
+        "titulo","descricao","finalidade","valor","bairro","cidade","quarto","banheiro","vaga_garagem","suite","areatotal"
+    ],
+    "filter":{
+        "cidade":[3662],
+        "finalidade":"venda",
+        "tipo": ["APARTAMENTO"]
+    },
+    "paginacao":{
+        "pagina": 1,
+        "quantidade": 25
+    },
+    "order":{
+        "bairro": "ASC",
+        "cidade": "DESC",
+        "titulo": "ASC",
+        "valor": "DESC",
+        "banheiro": "ASC",
+        "quarto": "DESC",
+        "suite": "ASC",
+        "vagaGaragem": "DESC"
+    }
+};
+
+function getImoveis(url, data) {
+    fetch(url, {
+        credentials: 'same-origin',
+        method: 'POST',
+        mode: "cors",
+        body: JSON.stringify(data),
+        headers: new Headers({
+            'Content-type': 'application/json',
+            'codigoFilial': 'FphHIee9+YVqZAiK6EwwWQ=='
+        })
+    })
+    .then(response => response.json())
+    .then(res => console.log(res))
+}
+
+getImoveis(ROOT_URL, data);
