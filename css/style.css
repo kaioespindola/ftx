@@ -248,6 +248,68 @@ a {
     margin-top: .5rem;
 }
 
+/* Imóveis */
+
+.imoveis-bg {
+    color: #fff;
+    padding: 1rem;
+    background: rgba(23,97,200,1);
+    background: -moz-linear-gradient(top, rgba(23,97,200,1) 0%, rgba(89,150,235,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(23,97,200,1)), color-stop(100%, rgba(89,150,235,1)));
+    background: -webkit-linear-gradient(top, rgba(23,97,200,1) 0%, rgba(89,150,235,1) 100%);
+    background: -o-linear-gradient(top, rgba(23,97,200,1) 0%, rgba(89,150,235,1) 100%);
+    background: -ms-linear-gradient(top, rgba(23,97,200,1) 0%, rgba(89,150,235,1) 100%);
+    background: linear-gradient(to bottom, rgba(23,97,200,1) 0%, rgba(89,150,235,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1761c8', endColorstr='#5996eb', GradientType=0 );
+}
+
+.imoveis-lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.imoveis-lista .imovel {
+    background-size: 100% auto;
+    background-position: top center;
+    height: 350px;
+    transition: .5s ease-in-out;
+}
+
+.imoveis-lista .imovel:hover {
+    background-size: 103% auto;
+}
+
+.imoveis-lista .imovel .ctd {
+    height: 320px;
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+    background: rgba(23,97,200,0);
+    background: -moz-linear-gradient(top, rgba(23,97,200,0) 0%, rgba(89,150,235,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(23,97,200,0)), color-stop(100%, rgba(89,150,235,1)));
+    background: -webkit-linear-gradient(top, rgba(23,97,200,0) 0%, rgba(89,150,235,1) 100%);
+    background: -o-linear-gradient(top, rgba(23,97,200,0) 0%, rgba(89,150,235,1) 100%);
+    background: -ms-linear-gradient(top, rgba(23,97,200,0) 0%, rgba(89,150,235,1) 100%);
+    background: linear-gradient(to bottom, rgba(23,97,200,0) 0%, rgba(89,150,235,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1761c8', endColorstr='#5996eb', GradientType=0 );
+}
+
+.imoveis-lista a {
+    text-decoration: none;
+}
+
+.imoveis-lista .imovel .ctd .dados h1 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+}
+
+.imoveis-lista .imovel .ctd .dados p {
+    width: 100%;
+    margin-top: .3rem;
+}
+
+
 /* Oferecemos */
 
 .oferecemos {
