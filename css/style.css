@@ -269,15 +269,21 @@ a {
     grid-gap: 1rem;
 }
 
+@media(max-width: 500px) {
+    .imoveis-lista {
+        grid-template-columns: 1fr;
+    }
+}
+
 .imoveis-lista .imovel {
-    background-size: 100% auto;
+    background-size: auto 100%;
     background-position: top center;
     height: 350px;
     transition: .5s ease-in-out;
 }
 
 .imoveis-lista .imovel:hover {
-    background-size: 103% auto;
+    background-size: auto 105%;
 }
 
 .imoveis-lista .imovel .ctd {
