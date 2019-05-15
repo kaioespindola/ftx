@@ -140,7 +140,7 @@ function injectImoveis(imoveis, limit) {
     })
 }
 
-getImoveis(ROOT_URL, data, 6);
+getImoveis(ROOT_URL, data, 4);
 
 function string_to_slug (str) {
     str = str.replace(/^\s+|\s+$/g, ''); // trim
